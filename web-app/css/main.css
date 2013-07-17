@@ -352,3 +352,11 @@ div.legendIcon {float: left; margin-right: 3px; width: 16px; height: 12px; borde
 .ui-timepicker-rtl{ direction: rtl; }
 .ui-timepicker-rtl dl { text-align: right; }
 .ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+
+
+/* ==== Div positionning with CSS ==== */
+.reservationContent .filterBox { border: 1px solid #DDD; }
+.reservationContent .chartAndLegendArea { margin-top:20px; padding: 5px 6px; border: 1px solid #DDD; }
+.reservationContent .legendBox { width: 35%; display: inline-block; vertical-align:top;}
+.reservationContent .chartBox { width: 64%;  display: inline-block; vertical-align:top;}
