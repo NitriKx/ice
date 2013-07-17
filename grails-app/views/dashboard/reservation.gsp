@@ -23,9 +23,9 @@
   <title>Aws Usage Reservation</title>
 </head>
 <body>
-<div class="reservationContent" style="margin: auto;  padding: 20px 30px" ng-controller="reservationCtrl">
+<div class="reservationContent" ng-controller="reservationCtrl">
 
-  <div class="filtersBox ">
+  <div class="filtersBox" ng-show="!graphOnly()">
     <table>
 	    <tr>
 	      <td>Start</td>
@@ -96,22 +96,22 @@
 	        <select ng-model="selected_usageTypes" ng-options="a.name for a in usageTypes | filter:filter_usageTypes" multiple="multiple" class="metaUsageTypes metaSelect"></select>
 	        <br><input ng-model="filter_usageTypes" type="text" class="metaFilter" placeholder="filter">
 	      </td>
-	
 	    </tr>
-	 </table>
+	  </table>
 	
-	 <div class="buttons">
-	   <img src="${resource(dir: '/')}images/spinner.gif" ng-show="loading">
-	   <a href="javascript:void(0)" class="monitor" style="background-image: url(${resource(dir: '/')}images/tango/16/apps/utilities-system-monitor.png)"
-	      ng-click="updateUrl(); getData()" ng-show="!loading"
-	      ng-disabled="selected_accounts.length == 0 || selected_regions.length == 0 && !showZones || selected_zones.length == 0 && showZones || selected_products.length == 0 || selected_operations.length == 0 || selected_usageTypes.length == 0">Submit</a>
-       <a href="javascript:void(0)" style="background-image: url(${resource(dir: '/')}images/tango/16/actions/document-save.png)"
-	      ng-click="download()" ng-show="!loading"
-	      ng-disabled="selected_accounts.length == 0 || selected_regions.length == 0 && !showZones || selected_zones.length == 0 && showZones || selected_products.length == 0 || selected_operations.length == 0 || selected_usageTypes.length == 0">Download</a>
-	 </div>
+		<div class="buttons">
+		  <img src="${resource(dir: '/')}images/spinner.gif" ng-show="loading">
+		  <a href="javascript:void(0)" class="monitor" style="background-image: url(${resource(dir: '/')}images/tango/16/apps/utilities-system-monitor.png)"
+		     ng-click="updateUrl(); getData()" ng-show="!loading"
+		     ng-disabled="selected_accounts.length == 0 || selected_regions.length == 0 && !showZones || selected_zones.length == 0 && showZones || selected_products.length == 0 || selected_operations.length == 0 || selected_usageTypes.length == 0">Submit</a>
+		     <a href="javascript:void(0)" style="background-image: url(${resource(dir: '/')}images/tango/16/actions/document-save.png)"
+		     ng-click="download()" ng-show="!loading"
+		     ng-disabled="selected_accounts.length == 0 || selected_regions.length == 0 && !showZones || selected_zones.length == 0 && showZones || selected_products.length == 0 || selected_operations.length == 0 || selected_usageTypes.length == 0">Download</a>
+    </div>
   </div><!-- </.filterBox> -->
   
   <div class="chartAndLegendArea">
+  
 	  <div class="legendBox" ng-show="!graphOnly()" >
 	    <div>
 	      <a href="javascript:void(0)" class="legendControls" ng-click="showall()">SHOW ALL</a>
@@ -138,12 +138,13 @@
 	        </tbody>
 	      </table>
 	    </div>
-	  </div>
+	  </div> <!-- </.legendBox> -->
 	  
-	  <div class="chartBox" style="">
-	    <div id="highchart_container" style="width: 100%; height: 600px;">
+	  <div class="chartBox">
+	    <div id="highchart_container">
 	    </div>
 	  </div>
+	  
   </div> <!-- </.graphAndLegendArea> -->
 
 </div>

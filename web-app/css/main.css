@@ -356,7 +356,17 @@ div.legendIcon {float: left; margin-right: 3px; width: 16px; height: 12px; borde
 
 
 /* ==== Div positionning with CSS ==== */
-.reservationContent .filterBox { border: 1px solid #DDD; }
+.reservationContent { margin: auto;  padding: 20px 30px; }
 .reservationContent .chartAndLegendArea { margin-top:20px; padding: 5px 6px; border: 1px solid #DDD; }
 .reservationContent .legendBox { width: 35%; display: inline-block; vertical-align:top;}
 .reservationContent .chartBox { width: 64%;  display: inline-block; vertical-align:top;}
+.reservationContent .chartBox #highchart_container { width: 100%; height: 600px; }
+
+.summaryContent { width:90%; margin: auto; padding: 20px 30px; }
+.summaryContent .chartBox #highchart_container { width: 100%; height: 400px; }
+
+.detailsContent { margin: auto; width: 90%; padding: 20px 30px }
+.detailsContent .chartAndLegendArea { margin-top:20px; padding: 5px 6px; border: 1px solid #DDD; }
+.detailsContent .legendBox { width: 35%; display: inline-block; vertical-align:top;}
+.detailsContent .chartBox { width: 64%;  display: inline-block; vertical-align:top;}
+.detailsContent .chartBox #highchart_container { width: 100%; height: 600px; }
