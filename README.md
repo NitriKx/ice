@@ -57,7 +57,7 @@ Using basic setup, you don't need any extra code change and you will use the pro
           ice.work_s3bucketname=work_s3bucketname
           ice.work_s3bucketprefix=work_s3bucketprefix/
   
-  1.4 If running locally, set the following system properties at runtime. ice.s3AccessToken is optional.
+  1.4 If running locally, set the following system properties at runtime (on the JVM; -D option). ice.s3AccessToken is optional.
      
           ice.s3AccessKeyId=<accessKeyId>
           ice.s3SecretKey=<secretKey>
