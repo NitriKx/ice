@@ -1,0 +1,8 @@
+*.class
+/target
+/target-eclipse
+/work
+/web-app/WEB-INF/tld
+.DS_Store
+web-app/WEB-INF/grails-app
+.fuse_hidden*
