@@ -66,12 +66,12 @@ grails.project.dependency.resolution = {
 
         compile(
                 // Amazon Web Services programmatic interface
-                'com.amazonaws:aws-java-sdk:1.9.12',
+                'com.amazonaws:aws-java-sdk:1.11.77',
                 // Transitive dependencies of aws-java-sdk, but also used directly.
                 // It would be great if we could upgrade httpcore and httpclient, but we can't until the AWS Java SDK
                 // upgrades its dependencies. If we simply upgrade these, then some Amazon calls fail.
-                'org.apache.httpcomponents:httpcore:4.2',
-                'org.apache.httpcomponents:httpclient:4.2',
+                'org.apache.httpcomponents:httpcore:4.4.4',
+                'org.apache.httpcomponents:httpclient:4.5.2',
 
                 // Explicitly including aws-java-sdk transitive dependencies
                 'org.codehaus.jackson:jackson-core-asl:1.8.9',
@@ -82,18 +82,19 @@ grails.project.dependency.resolution = {
 
                 // Easier Java from of the Apache Foundation
                 'commons-lang:commons-lang:2.4',
+                'commons-io:commons-io:2.4',
      
                 // Better Zip Support
-                'org.apache.commons:commons-compress:1.8',
+                'org.apache.commons:commons-compress:1.12',
 
                 // Easier Java from Joshua Bloch and Google
                 'com.google.guava:guava:14.0',
 
                 // Send emails about system errors and task completions
-                'javax.mail:mail:1.4.1',
+                'javax.mail:mail:1.4.3',
 
                 // Better date API
-                'joda-time:joda-time:2.0',
+                'joda-time:joda-time:2.2',
 
                 'net.sourceforge.javacsv:javacsv:2.0',
 
